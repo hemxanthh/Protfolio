@@ -8,43 +8,51 @@
 
   <h2>Contact Me</h2>
 
-  <!-- Your form -->
-  // Telegram bot configuration
-    const BOT_TOKEN = '7582970568:AAE7hfwXDPQYKm0q3WWAvBIix2ffWuabtuQ';
-    const CHAT_ID = '1331944827';
-    const MESSAGE = `Name: ${form.name}\nEmail: ${form.email}\nMessage: ${form.message}`;
+  <form id="contact-form" onsubmit="sendToTelegram(event)">
+    <input type="text" id="name" placeholder="Your Name" required><br><br>
+    <input type="email" id="email" placeholder="Your Email" required><br><br>
+    <textarea id="message" placeholder="Your Message" required></textarea><br><br>
+    <button type="submit">Send Message</button>
+  </form>
 
-    // Send the message via Telegram API
-    fetch(`https://api.telegram.org/bot<7582970568:AAE7hfwXDPQYKm0q3WWAvBIix2ffWuabtuQ>/sendMessage `, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        chat_id: CHAT_ID,
-        text: MESSAGE,
-      }),
-    })
-      .then((response) => {
+  <script>
+    function sendToTelegram(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      const BOT_TOKEN = '7582970568:AAE7hfwXDPQYKm0q3WWAvBIix2ffWuabtuQ';
+      const CHAT_ID = '1331944827';
+      const TELEGRAM_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+      const fullMessage = `📩 *New Portfolio Message:*\n\n👤 *Name:* ${name}\n📧 *Email:* ${email}\n💬 *Message:* ${message}`;
+
+      fetch(TELEGRAM_API, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: fullMessage,
+          parse_mode: "Markdown"
+        })
+      })
+      .then(response => {
         if (response.ok) {
-          setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
-          setForm({
-            name: '',
-            email: '',
-            message: '',
-          });
+          alert('✅ Message sent to Telegram!');
+          document.getElementById('contact-form').reset();
         } else {
-          throw new Error('Failed to send message.');
+          alert('❌ Failed to send message.');
         }
       })
-      .catch((error) => {
-        setLoading(false);
-        console.error(error);
-        alert('Something went wrong. Please try again.');
+      .catch(error => {
+        console.error('Error:', error);
+        alert('⚠️ Something went wrong. Please try again.');
       });
-  };
-
+    }
   </script>
 
 </body>
