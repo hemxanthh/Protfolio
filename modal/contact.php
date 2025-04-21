@@ -1,59 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Me</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Hemanth</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1c1c1c;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-container h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #444;
+      background-color: #222;
+      color: white;
+      font-size: 1rem;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00bfff;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00bfff;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #008cba;
+    }
+
+    .form-message {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
-  <h2>Contact Me</h2>
+<div class="contact-container">
+  <h1>Contact Me</h1>
+  <!-- Formspree integration -->
+  <form action="https://formspree.io/f/xyzwgpgz" method="POST">
+    <div class="form-group">
+      <label for="name">Your Name:</label>
+      <input type="text" name="name" id="name" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" id="email" required>
+    </div>
 
-  <form id="contact-form" onsubmit="sendToTelegram(event)">
-    <input type="text" id="name" placeholder="Your Name" required><br><br>
-    <input type="email" id="email" placeholder="Your Email" required><br><br>
-    <textarea id="message" placeholder="Your Message" required></textarea><br><br>
+    <div class="form-group">
+      <label for="message">Your Message:</label>
+      <textarea name="message" id="message" rows="4" required></textarea>
+    </div>
+
     <button type="submit">Send Message</button>
   </form>
 
-  <script>
-    function sendToTelegram(event) {
-      event.preventDefault();
-
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-
-      const BOT_TOKEN = '7738272732:AAGCWgTMzWeRR24Xpc5Hy23aqlAmkHR5mDU';
-      const TELEGRAM_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
-      const chat_id = '1331944827';
-
-      const fullMessage = `📩 *New Portfolio Message:*\n\n👤 *Name:* ${name}\n📧 *Email:* ${email}\n💬 *Message:* ${message}`;
-
-      fetch(TELEGRAM_API, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          chat_id: chat_id,
-          text: fullMessage,
-          parse_mode: "Markdown"
-        })
-      })
-      .then(response => {
-        if (response.ok) {
-          alert('✅ Message sent to Telegram!');
-          document.getElementById('contact-form').reset();
-        } else {
-          alert('❌ Failed to send message.');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('⚠️ Something went wrong. Please try again.');
-      });
-    }
-  </script>
+  <div class="form-message">
+    <!-- Success or error messages will be shown here -->
+  </div>
+</div>
 
 </body>
 </html>
