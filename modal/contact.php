@@ -23,9 +23,9 @@
       const email = document.getElementById('email').value;
       const message = document.getElementById('message').value;
 
-      const BOT_TOKEN = '7582970568:AAE7hfwXDPQYKm0q3WWAvBIix2ffWuabtuQ';
-      const CHAT_ID = '1331944827';
-      const TELEGRAM_API = `https://api.telegram.org/bot${7582970568:AAE7hfwXDPQYKm0q3WWAvBIix2ffWuabtuQ}/sendMessage`;
+      const BOT_TOKEN = '7738272732:AAGCWgTMzWeRR24Xpc5Hy23aqlAmkHR5mDU';
+      const TELEGRAM_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+      const chat_id = '1331944827';
 
       const fullMessage = `📩 *New Portfolio Message:*\n\n👤 *Name:* ${name}\n📧 *Email:* ${email}\n💬 *Message:* ${message}`;
 
@@ -35,7 +35,7 @@
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          chat_id: CHAT_ID,
+          chat_id: chat_id,
           text: fullMessage,
           parse_mode: "Markdown"
         })
