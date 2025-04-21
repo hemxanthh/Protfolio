@@ -1,4 +1,120 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hemanth | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1c1c1c;
+    }
+
+    .hero {
+      background: url('5.jpg') no-repeat center center/cover;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Fade out at the bottom of hero section */
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 200px;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #1c1c1c);
+      z-index: 1;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+
+    .content {
+      z-index: 2;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    .content h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #00bfff;
+    }
+
+    /* Optional: Dummy next section to scroll into */
+    .next-section {
+      height: 100vh;
+      background-color: #1c1c1c;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="overlay"></div>
+  
+  <div class="content">
+    <h1>HEMANTH</h1>
+    <p>A passionate Data/Business Analyst, eager to work on data driven insights.</p>
+    <div class="social-icons">
+      <a href="#"><i class="bi bi-linkedin"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-github"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Next section to scroll into -->
+<div class="next-section">
+  Welcome to my portfolio!
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
@@ -102,14 +218,7 @@
 								<span style="font-size: x-large;">I'm</span>
 								<h3 class="name">HEMANTH</h3>
 								<p class="text">A passionate Data/Bussiness Analyst , eager to work on data driven insights. </p>
-								<!-- <div class="iknow_tm_video">
-									<div class="video_inner">
-										<div class="circle"></div>
-										<h3 class="play">Play Video</h3>
-										<a class="iknow_tm_full_link popup-youtube"
-											href="https://www.youtube.com/watch?v=7e90gBu4pas"></a>
-									</div>
-								</div> -->
+					
 							</div>
 							<div class="right">
 								<div class="image">
@@ -135,11 +244,7 @@
 									<span>Portfolio</span>
 									<a class="iknow_tm_full_link" href="#portfolio"></a>
 								</li>
-								<!-- <li>
-									<img class="svg" src="img/svg/gear.svg" alt="" />
-									<span>Service</span>
-									<a class="iknow_tm_full_link" href="#service"></a>
-								</li> -->
+								
 								
 								<li>
 									<img class="svg" src="img/svg/letter.svg" alt="" />
@@ -268,11 +373,7 @@
 														<span>2023 - 2026</span>
 													</div>
 												</div>
-												<!-- <div class="text">
-													<p>The goal of cognitive science is to understand the principles of
-														intelligence with the hope that this will lead to better
-														comprehension.</p>
-												</div> -->
+										
 											</div>
 										</li>
 										<li>
@@ -286,9 +387,7 @@
 														<span>2021 - 2023</span>
 													</div>
 												</div>
-												<!-- <div class="text">
-													<p>Studied in the feild of Accounts, Statistics , Economics and Bussines Studies.</p>
-												</div> -->
+												
 											</div>
 										</li>
 										<li>
@@ -302,11 +401,7 @@
 														<span>2009 - 2020</span>
 													</div>
 												</div>
-												<!-- <div class="text">
-													<p>This project is called a thesis and is usually presented in front
-														of a group of people, including university professors who will
-														evaluate it and let the student..</p>
-												</div> -->
+												
 											</div>
 										</li>
 									</ul>
@@ -428,50 +523,7 @@
 										</div>
 									</div>
 								</div>
-								<!-- <div class="skills_list">
-									<div class="iknow_tm_resume_title">
-										<h3>Software Skills</h3>
-										<span class="shape"></span>
-									</div>
-									<div class="software">
-										<div class="circular_progress_bar">
-											<ul>
-												<li>
-													<div class="list_inner">
-														<div class="myCircle" data-value="0.8"></div>
-														<div class="title">
-															<h3>Ms Office</h3>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div class="list_inner">
-														<div class="myCircle" data-value="0.75"></div>
-														<div class="title">
-															<h3>Photoshop</h3>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div class="list_inner">
-														<div class="myCircle" data-value="0.9"></div>
-														<div class="title">
-															<h3>Illustrator</h3>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div class="list_inner">
-														<div class="myCircle" data-value="0.65"></div>
-														<div class="title">
-															<h3>Figma</h3>
-														</div>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div> -->
+								
 							</div>
 						</div>
 					</div>
@@ -544,503 +596,8 @@
 	  </div>
 	</div>
   </div>
-  <!-- /PORTFOLIO -->
-  
-<!-- /PORTFOLIO -->
 
-				<!-- SERVICES -->
-				<!-- <div id="service" class="iknow_tm_main_section">
-					<div class="iknow_tm_services">
-						<div class="iknow_tm_main_title">
-							<span>Service</span>
-							<h3>Never compromise with quality</h3>
-						</div>
-						<div class="service_list">
-							<ul>
-								<li>
-									<div class="list_inner">
-										<span class="icon"><img class="svg" src="img/svg/squares.svg" alt="" /></span>
-										<h3 class="title">Wireframing</h3>
-										<p class="text">Web development is the building and maintenance of websites.
-											it’s the work that...</p>
-										<a class="iknow_tm_full_link" href="#"></a>
-										<div class="hidden_content">
-											<div class="service_informations">
-												<div class="image">
-													<img src="img/thumbs/4-2.jpg" alt="" />
-													<div class="main" data-img-url="img/service/1.jpg"></div>
-												</div>
-												<div class="description">
-													<p>iKnow is a leading web design agency with an award-winning design
-														team that creates innovative, effective websites that capture
-														your brand, improve your conversion rates, and maximize your
-														revenue to help grow your business and achieve your goals.</p>
-													<p>In today’s digital world, your website is the first interaction
-														consumers have with your business. That's why almost 95 percent
-														of a user’s first impression relates to web design. It’s also
-														why web design services can have an immense impact on your
-														company’s bottom line.</p>
-													<p>That’s why more companies are not only reevaluating their
-														website’s design but also partnering with Kura, the web design
-														agency that’s driven more than $2.4 billion in revenue for its
-														clients. With over 50 web design awards under our belt, we're
-														confident we can design a custom website that drives sales for
-														your unique business.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="list_inner">
-										<span class="icon"><img class="svg" src="img/svg/physics.svg" alt="" /></span>
-										<h3 class="title">Prototype</h3>
-										<p class="text">Web development is the building and maintenance of websites.
-											it’s the work that...</p>
-										<a class="iknow_tm_full_link" href="#"></a>
-										<div class="hidden_content">
-											<div class="service_informations">
-												<div class="image">
-													<img src="img/thumbs/4-2.jpg" alt="" />
-													<div class="main" data-img-url="img/service/2.jpg"></div>
-												</div>
-												<div class="description">
-													<p>iKnow is a leading web design agency with an award-winning design
-														team that creates innovative, effective websites that capture
-														your brand, improve your conversion rates, and maximize your
-														revenue to help grow your business and achieve your goals.</p>
-													<p>In today’s digital world, your website is the first interaction
-														consumers have with your business. That's why almost 95 percent
-														of a user’s first impression relates to web design. It’s also
-														why web design services can have an immense impact on your
-														company’s bottom line.</p>
-													<p>That’s why more companies are not only reevaluating their
-														website’s design but also partnering with Kura, the web design
-														agency that’s driven more than $2.4 billion in revenue for its
-														clients. With over 50 web design awards under our belt, we're
-														confident we can design a custom website that drives sales for
-														your unique business.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="list_inner">
-										<span class="icon"><img class="svg" src="img/svg/web.svg" alt="" /></span>
-										<h3 class="title">UI Design</h3>
-										<p class="text">Web development is the building and maintenance of websites.
-											it’s the work that...</p>
-										<a class="iknow_tm_full_link" href="#"></a>
-										<div class="hidden_content">
-											<div class="service_informations">
-												<div class="image">
-													<img src="img/thumbs/4-2.jpg" alt="" />
-													<div class="main" data-img-url="img/service/3.jpg"></div>
-												</div>
-												<div class="description">
-													<p>iKnow is a leading web design agency with an award-winning design
-														team that creates innovative, effective websites that capture
-														your brand, improve your conversion rates, and maximize your
-														revenue to help grow your business and achieve your goals.</p>
-													<p>In today’s digital world, your website is the first interaction
-														consumers have with your business. That's why almost 95 percent
-														of a user’s first impression relates to web design. It’s also
-														why web design services can have an immense impact on your
-														company’s bottom line.</p>
-													<p>That’s why more companies are not only reevaluating their
-														website’s design but also partnering with Kura, the web design
-														agency that’s driven more than $2.4 billion in revenue for its
-														clients. With over 50 web design awards under our belt, we're
-														confident we can design a custom website that drives sales for
-														your unique business.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="list_inner">
-										<span class="icon"><img class="svg" src="img/svg/user.svg" alt="" /></span>
-										<h3 class="title">Personal Creation</h3>
-										<p class="text">Web development is the building and maintenance of websites.
-											it’s the work that...</p>
-										<a class="iknow_tm_full_link" href="#"></a>
-										<div class="hidden_content">
-											<div class="service_informations">
-												<div class="image">
-													<img src="img/thumbs/4-2.jpg" alt="" />
-													<div class="main" data-img-url="img/service/4.jpg"></div>
-												</div>
-												<div class="description">
-													<p>iKnow is a leading web design agency with an award-winning design
-														team that creates innovative, effective websites that capture
-														your brand, improve your conversion rates, and maximize your
-														revenue to help grow your business and achieve your goals.</p>
-													<p>In today’s digital world, your website is the first interaction
-														consumers have with your business. That's why almost 95 percent
-														of a user’s first impression relates to web design. It’s also
-														why web design services can have an immense impact on your
-														company’s bottom line.</p>
-													<p>That’s why more companies are not only reevaluating their
-														website’s design but also partnering with Kura, the web design
-														agency that’s driven more than $2.4 billion in revenue for its
-														clients. With over 50 web design awards under our belt, we're
-														confident we can design a custom website that drives sales for
-														your unique business.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="list_inner">
-										<span class="icon"><img class="svg" src="img/svg/briefcase.svg" alt="" /></span>
-										<h3 class="title">Case Study</h3>
-										<p class="text">Web development is the building and maintenance of websites.
-											it’s the work that...</p>
-										<a class="iknow_tm_full_link" href="#"></a>
-										<div class="hidden_content">
-											<div class="service_informations">
-												<div class="image">
-													<img src="img/thumbs/4-2.jpg" alt="" />
-													<div class="main" data-img-url="img/service/5.jpg"></div>
-												</div>
-												<div class="description">
-													<p>iKnow is a leading web design agency with an award-winning design
-														team that creates innovative, effective websites that capture
-														your brand, improve your conversion rates, and maximize your
-														revenue to help grow your business and achieve your goals.</p>
-													<p>In today’s digital world, your website is the first interaction
-														consumers have with your business. That's why almost 95 percent
-														of a user’s first impression relates to web design. It’s also
-														why web design services can have an immense impact on your
-														company’s bottom line.</p>
-													<p>That’s why more companies are not only reevaluating their
-														website’s design but also partnering with Kura, the web design
-														agency that’s driven more than $2.4 billion in revenue for its
-														clients. With over 50 web design awards under our belt, we're
-														confident we can design a custom website that drives sales for
-														your unique business.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="list_inner">
-										<span class="icon"><img class="svg" src="img/svg/writing_2.svg" alt="" /></span>
-										<h3 class="title">Experience Design</h3>
-										<p class="text">Web development is the building and maintenance of websites.
-											it’s the work that...</p>
-										<a class="iknow_tm_full_link" href="#"></a>
-										<div class="hidden_content">
-											<div class="service_informations">
-												<div class="image">
-													<img src="img/thumbs/4-2.jpg" alt="" />
-													<div class="main" data-img-url="img/service/6.jpg"></div>
-												</div>
-												<div class="description">
-													<p>iKnow is a leading web design agency with an award-winning design
-														team that creates innovative, effective websites that capture
-														your brand, improve your conversion rates, and maximize your
-														revenue to help grow your business and achieve your goals.</p>
-													<p>In today’s digital world, your website is the first interaction
-														consumers have with your business. That's why almost 95 percent
-														of a user’s first impression relates to web design. It’s also
-														why web design services can have an immense impact on your
-														company’s bottom line.</p>
-													<p>That’s why more companies are not only reevaluating their
-														website’s design but also partnering with Kura, the web design
-														agency that’s driven more than $2.4 billion in revenue for its
-														clients. With over 50 web design awards under our belt, we're
-														confident we can design a custom website that drives sales for
-														your unique business.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div> -->
-				<!-- /SERVICES -->
 
-				<!-- TESTIMONIALS -->
-				<div id="testimonials" class="iknow_tm_main_section">
-					<div class="iknow_tm_testimonials">
-						<div class="iknow_tm_main_title">
-							<!-- <span>Testimonials</span> -->
-							<h3>What people say about me</h3>
-						</div>
-						<div class="testimonials_list owl-carousel owl-theme">
-							<div class="list_inner">
-								<div class="in">
-									<div class="text">
-										<p>DXC Recognition || You have been doing some excellent work in the areas that
-											have been assigned to you. Sorting out issues within different Projects as
-											lone soldier is truly appreciated. I really appreciate your work ethics too.
-										</p>
-									</div>
-									<div class="details">
-										<div class="left">
-											<div class="avatar">
-												<div class="main" data-img-url="img/testimonials/dxc.jpg"></div>
-											</div>
-											<div class="info">
-												<h3>Sagayaraj Arulanandam</h3>
-												<span>Manager System</span>
-											</div>
-										</div>
-										<div class="right">
-											<img class="svg" src="img/svg/left-quote.svg" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="list_inner">
-								<div class="in">
-									<div class="text">
-										<p>You are always responsible and strive to complete your work well and on time.
-											It is very appreciated. I’m so grateful that you always take the time to
-											help your coworkers. It’s really made our team come together. Your hard work
-											and commitment helped us, especially with the capability to Build and other
-											innovation activities.
-										</p>
-									</div>
-									<div class="details">
-										<div class="left">
-											<div class="avatar">
-												<div class="main" data-img-url="img/testimonials/dxc.jpg"></div>
-											</div>
-											<div class="info">
-												<h3>Rajesh N</h3>
-												<span>Manager Cloud Architecture</span>
-											</div>
-										</div>
-										<div class="right">
-											<img class="svg" src="img/svg/left-quote.svg" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="list_inner">
-								<div class="in">
-									<div class="text">
-										<p>I must appreciate his indomitable attitude toward technology and
-											troubleshooting on the subject until it gets resolved. He has really done a
-											great job so far; with successful project delivery in GCP.</p>
-									</div>
-									<div class="details">
-										<div class="left">
-											<div class="avatar">
-												<div class="main" data-img-url="img/testimonials/dxc.jpg"></div>
-											</div>
-											<div class="info">
-												<h3>Partha Paul</h3>
-												<span>Manager Cloud Architecture</span>
-											</div>
-										</div>
-										<div class="right">
-											<img class="svg" src="img/svg/left-quote.svg" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="list_inner">
-								<div class="in">
-									<div class="text">
-										<p>Sumanth is an exceptionally individual who consistently dedicates
-											himself to upskilling with latest technology. Not only does he stay
-											ahead of advancements, but he also generously shares his knowledge on open
-											platforms and with his teams. His adept time management skills ensure he
-											maximizes productivity while still finding ample opportunities to teach &
-											mentor others.
-										</p>
-									</div>
-									<div class="details">
-										<div class="left">
-											<div class="avatar">
-												<div class="main" data-img-url="img/testimonials/dxc.jpg"></div>
-											</div>
-											<div class="info">
-												<h3>Venkata Suresh</h3>
-												<span>Analyst II Cloud Engineering</span>
-											</div>
-										</div>
-										<div class="right">
-											<img class="svg" src="img/svg/left-quote.svg" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="list_inner">
-								<div class="in">
-									<div class="text">
-										<p>Sumanth impressed me by his hardworking and willing to study the new thing as
-											well as quick learning ability. He does not work with any .NET. But now he
-											can configuration, updating code to make it work on a different
-											infrastructure. Keep it up mate!</p>
-									</div>
-									<div class="details">
-										<div class="left">
-											<div class="avatar">
-												<div class="main" data-img-url="img/testimonials/dxc.jpg"></div>
-											</div>
-											<div class="info">
-												<h3>Tran Hoang Thieu Duong</h3>
-												<span>Associate Manager Software Engineering</span>
-											</div>
-										</div>
-										<div class="right">
-											<img class="svg" src="img/svg/left-quote.svg" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /TESTIMONIALS -->
-
-				<!-- NEWS -->
-				<div id="news" class="iknow_tm_main_section">
-					<div class="iknow_tm_news">
-						<div class="iknow_tm_main_title">
-							<!-- <span>Blog</span> -->
-							<h3>Latest tips, tricks &amp; Updates</h3>
-						</div>
-						<div class="news_list">
-							<ul>
-								<li>
-									<div class="list_inner">
-										<div class="image">
-											<img src="img/thumbs/37-27.jpg" alt="" />
-											<div class="main" data-img-url="img/blog/1.jpg"></div>
-											<a class="iknow_tm_full_link" target="_blank"
-												href="https://medium.com/@sumanthburla12/gemini-googles-most-capable-and-general-ai-model-437b06794c11"></a>
-										</div>
-										<div class="details">
-											<!-- <span class="category"><a
-													target="_blank" 
-													href="https://medium.com/@sumanthburla12/gemini-googles-most-capable-and-general-ai-model-437b06794c11">Web
-													Design</a></span> -->
-											<h3 class="title"><a target="_blank" style="pointer-events: none;"
-													href="https://medium.com/@sumanthburla12/gemini-googles-most-capable-and-general-ai-model-437b06794c11">Gemini:
-													Google’s Most Capable and General AI Model.</a>
-											</h3>
-										</div>
-
-										<!-- <div class="hidden_content">
-											<div class="news_informations">
-												<div class="text">
-													<p>iKnow is a leading web design agency with an award-winning design
-														team that creates innovative, effective websites that capture
-														your brand, improve your conversion rates, and maximize your
-														revenue to help grow your business and achieve your goals.</p>
-													<p>In today’s digital world, your website is the first interaction
-														consumers have with your business. That's why almost 95 percent
-														of a user’s first impression relates to web design. It’s also
-														why web design services can have an immense impact on your
-														company’s bottom line.</p>
-													<p>That’s why more companies are not only reevaluating their
-														website’s design but also partnering with Kura, the web design
-														agency that’s driven more than $2.4 billion in revenue for its
-														clients. With over 50 web design awards under our belt, we're
-														confident we can design a custom website that drives sales for
-														your unique business.</p>
-												</div>
-											</div>
-										</div> -->
-
-									</div>
-								</li>
-								<li>
-									<div class="list_inner">
-										<div class="image">
-											<img src="img/thumbs/37-27.jpg" alt="" />
-											<div class="main" data-img-url="img/blog/2.jpg"></div>
-											<a class="iknow_tm_full_link" target="_blank"
-												href="https://medium.com/google-cloud/how-to-optimize-gcp-vm-cost-with-automated-start-stop-script-d2d8e01b9570"></a>
-										</div>
-										<div class="details">
-											<!-- <span class="category"><a href="#">Branding</a></span> -->
-											<h3 class="title"><a style="pointer-events: none;"
-													href="https://medium.com/google-cloud/how-to-optimize-gcp-vm-cost-with-automated-start-stop-script-d2d8e01b9570">How
-													to Optimize GCP VM Cost with Automated
-													Start-Stop script.</a></h3>
-										</div>
-
-										<!-- <div class="hidden_content">
-											<div class="news_informations">
-												<div class="text">
-													<p>iKnow is a leading web design agency with an award-winning design
-														team that creates innovative, effective websites that capture
-														your brand, improve your conversion rates, and maximize your
-														revenue to help grow your business and achieve your goals.</p>
-													<p>In today’s digital world, your website is the first interaction
-														consumers have with your business. That's why almost 95 percent
-														of a user’s first impression relates to web design. It’s also
-														why web design services can have an immense impact on your
-														company’s bottom line.</p>
-													<p>That’s why more companies are not only reevaluating their
-														website’s design but also partnering with Kura, the web design
-														agency that’s driven more than $2.4 billion in revenue for its
-														clients. With over 50 web design awards under our belt, we're
-														confident we can design a custom website that drives sales for
-														your unique business.</p>
-												</div>
-											</div>
-										</div> -->
-
-									</div>
-								</li>
-								<li>
-									<div class="list_inner">
-										<div class="image">
-											<img src="img/thumbs/37-27.jpg" alt="" />
-											<div class="main" data-img-url="img/blog/3.jpg"></div>
-											<a class="iknow_tm_full_link" target="_blank"
-												href="https://medium.com/google-cloud/a-proactive-cloud-function-to-safeguard-gcp-projects-from-bulkinsert-api-abuse-fbd5d21990f6"></a>
-										</div>
-										<div class="details">
-											<!-- <span class="category"><a href="#">UI Design</a></span> -->
-											<h3 class="title"><a style="pointer-events: none;"
-													href="https://medium.com/google-cloud/a-proactive-cloud-function-to-safeguard-gcp-projects-from-bulkinsert-api-abuse-fbd5d21990f6">A
-													Proactive Cloud Function to Safeguard GCP
-													Projects from bulkInsert API Abuse</a>
-											</h3>
-										</div>
-
-										<!-- <div class="hidden_content">
-											<div class="news_informations">
-												<div class="text">
-													<p>iKnow is a leading web design agency with an award-winning design
-														team that creates innovative, effective websites that capture
-														your brand, improve your conversion rates, and maximize your
-														revenue to help grow your business and achieve your goals.</p>
-													<p>In today’s digital world, your website is the first interaction
-														consumers have with your business. That's why almost 95 percent
-														of a user’s first impression relates to web design. It’s also
-														why web design services can have an immense impact on your
-														company’s bottom line.</p>
-													<p>That’s why more companies are not only reevaluating their
-														website’s design but also partnering with Kura, the web design
-														agency that’s driven more than $2.4 billion in revenue for its
-														clients. With over 50 web design awards under our belt, we're
-														confident we can design a custom website that drives sales for
-														your unique business.</p>
-												</div>
-											</div>
-										</div> -->
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- /NEWS -->
 
 				<!-- CONTACT -->
 				<div id="contact" class="iknow_tm_main_section">
