@@ -25,7 +25,7 @@
 
       const BOT_TOKEN = '7582970568:AAE7hfwXDPQYKm0q3WWAvBIix2ffWuabtuQ';
       const CHAT_ID = '1331944827';
-      const TELEGRAM_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+      const TELEGRAM_API = `https://api.telegram.org/bot${7582970568:AAE7hfwXDPQYKm0q3WWAvBIix2ffWuabtuQ}/sendMessage`;
 
       const fullMessage = `📩 *New Portfolio Message:*\n\n👤 *Name:* ${name}\n📧 *Email:* ${email}\n💬 *Message:* ${message}`;
 
