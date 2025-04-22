@@ -111,7 +111,7 @@
 </div>
 
 <script>
-  const nameText = "HEMANTH K ";
+  const nameText = "HEMANTH";
   const descText = "Wanderlust-driven data enthusiast on a quest to decode the world's patterns. When I'm not analyzing datasets, I'm leveling up my ranks in the game. Welcome to my journey!";
 
   let nameIndex = 0;
@@ -131,12 +131,12 @@
     if (descIndex < descText.length) {
       document.getElementById("typewriter-desc").innerHTML += descText.charAt(descIndex);
       descIndex++;
-      setTimeout(typeWriterDesc, 40);
+      setTimeout(typeWriterDesc, 60);
     }
   }
 
   window.onload = () => {
-    setTimeout(typeWriterName, 300);
+    setTimeout(typeWriterName, 500);
   };
 </script>
 
